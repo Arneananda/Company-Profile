@@ -3,7 +3,14 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+
+use App\Models\User;
+use App\Models\Team;
 use Illuminate\Database\Seeder;
+use App\Models\Link;
+use App\Models\Service;
+use App\Models\custpart;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,11 +19,37 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+
+        User::create([
+            'name' => 'wilson',
+            'password' => 'admin123'
+        ]);
+        custpart::factory(10)->create();
+    //   User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
         // ]);
+        Link::create([
+            'name' => 'Linkedin',
+            'link' => 'https://www.linkedin.com/company/rapitechindonesia/mycompany/'
+        ]);
+        Link::create([
+            'name' => 'Youtube',
+            'link' => 'https://www.youtube.com/channel/UCDm0RwY3cE36DuXzZTHz1Zg'
+        ]);
+        Link::create([
+            'name' => 'TikTok',
+            'link' => 'https://www.tiktok.com/@rapiertechnology?is_from_webapp=1&sender_device=pc'
+        ]);
+        Link::create([
+            'name' => 'Instagram',
+            'link' => 'https://www.instagram.com/rapiertechnology/'
+        ]);
+        
+
+
+         
     }
+
 }

@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-tailwind-css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/css/final.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.0.0-alpha.6",
+    "prettier-plugin-tailwindcss": "^0.5.4",
+    "tailwindcss": "^3.0.23"
+  },
+  "dependencies": {
+    "@material-tailwind/react": "^2.1.2",
+    "flowbite-react": "^0.6.4",
+    "taos": "^1.0.5"
+  }
+}
